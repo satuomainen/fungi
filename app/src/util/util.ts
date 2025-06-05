@@ -5,3 +5,5 @@ export const convertEdibility = (stars: string | undefined = '') => {
     .replace(/o/g, '◯')
     .replace(/t/g, '☠');
 };
+
+export const resolveImagePath = (image: string) => `${import.meta.env.BASE_URL}/images/${image}`;

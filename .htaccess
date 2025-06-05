@@ -1,0 +1,9 @@
+RewriteEngine On
+Options -Indexes
+RewriteRule ^fungi/api/(.*) api/index.php/$1
+<FilesMatch "\.js$">
+    ForceType text/javascript
+</FilesMatch>
+<FilesMatch "\.css$">
+    ForceType text/css
+</FilesMatch>

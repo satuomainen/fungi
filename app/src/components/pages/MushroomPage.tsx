@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import {Table, TableBody, TableCell, TableContainer, TableRow, Typography} from '@mui/material';
-import {convertEdibility} from '../../util/util.ts';
+import {convertEdibility, resolveImagePath} from '../../util/util.ts';
 import {NavSeparator} from '../layout/NavSeparator.tsx';
 import {NavButton} from '../layout/NavButton.tsx';
 import {LangSelector} from '../layout/LangSelector.tsx';
@@ -67,7 +67,7 @@ export const MushroomPage = () => {
       </Grid>
 
       <Grid className="species__image" size={{xs: 12}} display="flex" justifyContent="center">
-        <Box component="img" src={`images/${species.image}`} alt={`${species.name.fi} (${species.name.sv})`}/>
+        <Box component="img" src={resolveImagePath(species.image)} alt={`${species.name.fi} (${species.name.sv})`}/>
       </Grid>
 
       <Grid size={{xs: 12}}>

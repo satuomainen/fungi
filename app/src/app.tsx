@@ -10,7 +10,16 @@ import {ErrorPage} from './components/pages/ErrorPage.tsx';
 import {FullPageSpinner} from './components/layout/FullPageSpinner.tsx';
 import {MushroomPage} from './components/pages/MushroomPage.tsx';
 
-const resolveBackendUrl = (uri: string) => `http://localhost:8080${uri}`;
+const resolveBackendUrl = (uri: string) => {
+  console.log(`import.meta.env.MODE=${import.meta.env.MODE}`);
+  console.log(`import.meta.env.BASE_URL=${import.meta.env.BASE_URL}`);
+  if (import.meta.env.MODE === 'production') {
+    return `${import.meta.env.BASE_URL}/api${uri}`;
+  }
+
+  // Served locally from the docker container that exposes a different port
+  return `http://localhost:8080/fungi/api${uri}`
+};
 
 const router = createHashRouter([
   {

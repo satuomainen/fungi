@@ -7,6 +7,7 @@ import {useTranslation} from 'react-i18next';
 import {Typography} from '@mui/material';
 
 import './ErrorPage.scss';
+import {resolveImagePath} from '../../util/util.ts';
 
 export const ErrorPage = () => {
   const {t} = useTranslation();
@@ -27,7 +28,7 @@ export const ErrorPage = () => {
     >
       <Grid container gap={4}>
         <Grid className="error__image" size={{xs: 12}} display="flex" justifyContent="center">
-          <Box component="img" src="/images/error.jpg"/>
+          <Box component="img" src={resolveImagePath('error.jpg')}/>
         </Grid>
         <Grid size={{xs: 12}} display="flex" justifyContent="center">
           <Box component="div">

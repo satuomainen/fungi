@@ -7,4 +7,6 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./backend:/var/www/html
+      - ./build:/var/www/html/fungi/
+      - ./.htaccess:/var/www/html/fungi/.htaccess
+      - ./api:/var/www/html/fungi/api

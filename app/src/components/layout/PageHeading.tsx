@@ -6,6 +6,7 @@ import {LangSelector} from './LangSelector.tsx';
 import {NavSeparator} from './NavSeparator.tsx';
 import {NavButton} from './NavButton.tsx';
 import {useTranslation} from 'react-i18next';
+import {resolveImagePath} from '../../util/util.ts';
 
 interface PageHeadingProps {
   mainTitle: string;
@@ -17,7 +18,7 @@ export const PageHeading = ({mainTitle, subTitle}: PageHeadingProps) => {
   return (
     <Grid container gap={1}>
       <Grid size={{xs: 12, sm: 4, md: 2}}>
-        <Box component="img" src="images/pick_s.jpg"/>
+        <Box component="img" src={resolveImagePath('pick_s.jpg')}/>
       </Grid>
       <Grid size={{xs: 12, sm: 6, md: 9}} display="flex" alignItems="center" flexDirection="column"
             justifyContent="center">

@@ -12,4 +12,7 @@ fully.
 Images and articles are stored in a private repo. Those need to be copied from there to the working
 clone of this repo. The assets should be automatically git-ignored.
 
-To serve the backed, run `docker compose up`.
+To serve the backend, run `docker compose up`. The API will appear in `http://localhost:8080/fungi/api`.
+
+To serve the frontend, in the `app` directory, run `npm run dev`. Vite will print out the URL on
+the console.

@@ -1,0 +1,13 @@
+.error {
+  &__image img {
+    margin: 24px 0;
+    border-color: var(--mui-palette-text-primary);
+    border-style: solid;
+    border-width: 24px;
+  }
+
+  & a {
+    background-color: var(--mui-palette-text-primary);
+    color: var(--mui-palette-background-default);
+  }
+}

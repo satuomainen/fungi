@@ -6,7 +6,7 @@ import {appTheme} from './theme.js';
 import {ArticlePage} from './components/pages/ArticlePage.tsx';
 import {BaseLayout} from './components/layout/BaseLayout.tsx';
 import {CatalogPage} from './components/pages/CatalogPage.tsx';
-// import {ErrorPage} from './components/pages/ErrorPage.tsx';
+import {ErrorPage} from './components/pages/ErrorPage.tsx';
 import {FullPageSpinner} from './components/layout/FullPageSpinner.tsx';
 import {MushroomPage} from './components/pages/MushroomPage.tsx';
 
@@ -16,7 +16,7 @@ const router = createHashRouter([
   {
     path: '/',
     element: <BaseLayout/>,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     id: 'articles',
     loader: () => fetch(resolveBackendUrl('/articles')).then(res => res.json()),
     children: [

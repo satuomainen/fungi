@@ -32,7 +32,7 @@ export const translations = {
     translation: {
       'Alkuun': 'Till början',
       'Tunnistamisohjeet': 'Artidentifiering',
-      'Hakemisto': 'Katalog',
+      'Sienihakemisto': 'Svampkatalog',
       'Sieniä Suomessa ja Ruotsissa': 'Svampar i Finland och i Sverige',
       'Suomeksi': 'Finska',
       'Ruotsiksi': 'Svenska',
@@ -40,6 +40,8 @@ export const translations = {
       'Tieteellinen nimi': 'Vetenskaplig namn',
       'Syötävyys': 'Ätlighet',
       'Lisätietoja kuvauksessa': 'Mer information i beskrivningen',
+      'Nyt meni jotain mönkään...': 'Nu blev det något fel...',
+      'Palaa alkuun': 'Gå till startsidan',
     }
   },
   en: {
@@ -59,7 +61,7 @@ export const translations = {
     translation: {
       'Alkuun': 'Start',
       'Tunnistamisohjeet': 'How to identify',
-      'Hakemisto': 'Directory',
+      'Sienihakemisto': 'Mushroom directory',
       'Sieniä Suomessa ja Ruotsissa': 'Fungi in Finland and in Sweden',
       'Suomeksi': 'Finnish name',
       'Ruotsiksi': 'Swedish name',
@@ -67,6 +69,8 @@ export const translations = {
       'Tieteellinen nimi': 'Scientific name',
       'Syötävyys': 'Edibility',
       'Lisätietoja kuvauksessa': 'More details in description',
+      'Nyt meni jotain mönkään...': 'Oh no, something went wrong...',
+      'Palaa alkuun': 'Go to the start page',
     }
   }
 };

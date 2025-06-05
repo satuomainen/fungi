@@ -35,7 +35,7 @@ export const CatalogPage = () => {
 
   return (
     <>
-      <PageHeading mainTitle={t('Sieniä Suomessa ja Ruotsissa')} subTitle={t('Hakemisto')}/>
+      <PageHeading mainTitle={t('Sieniä Suomessa ja Ruotsissa')} subTitle={t('Sienihakemisto')}/>
       <CatalogTable rows={rows} columns={columns}/>
       <PageFooter/>
     </>

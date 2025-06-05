@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import {LangSelector} from './LangSelector.tsx';
 import {NavSeparator} from './NavSeparator.tsx';
 import {NavButton} from './NavButton.tsx';
-import {useNavigate} from 'react-router';
 import {useTranslation} from 'react-i18next';
 
 interface PageHeadingProps {
@@ -14,8 +13,7 @@ interface PageHeadingProps {
 }
 
 export const PageHeading = ({mainTitle, subTitle}: PageHeadingProps) => {
-  const navigate = useNavigate();
-  const { t } = useTranslation();
+  const {t} = useTranslation();
   return (
     <Grid container gap={1}>
       <Grid size={{xs: 12, sm: 4, md: 2}}>
@@ -29,7 +27,9 @@ export const PageHeading = ({mainTitle, subTitle}: PageHeadingProps) => {
       <Grid size={{xs: 12}}>
         <NavSeparator>
           <Box display="flex" justifyContent="flex-start" width="100%">
-            <NavButton onClick={() => navigate('/catalog')}>{t('Hakemisto')}</NavButton>
+            <NavButton to="/">{t('Alkuun')}</NavButton> |
+            <NavButton to="/catalog">{t('Sienihakemisto')}</NavButton> |
+            <NavButton to="/identification">{t('Tunnistamisohjeet')}</NavButton>
           </Box>
           <Box display="flex" justifyContent="flex-end" width="100%">
             <LangSelector/>

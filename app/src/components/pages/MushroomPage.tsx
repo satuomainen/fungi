@@ -1,16 +1,16 @@
-import {useLoaderData, useNavigate} from 'react-router';
+import {useLoaderData} from 'react-router';
 import {PageFooter} from '../layout/PageFooter.tsx';
 import {useTranslation} from 'react-i18next';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import {Table, TableBody, TableCell, TableContainer, TableRow, Typography} from '@mui/material';
+import {convertEdibility} from '../../util/util.ts';
 import {NavSeparator} from '../layout/NavSeparator.tsx';
 import {NavButton} from '../layout/NavButton.tsx';
 import {LangSelector} from '../layout/LangSelector.tsx';
 import type {Species, SpeciesAttribute, SupportedLanguage} from '../../../types/apitypes';
 
 import './MushroomPage.scss';
-import {convertEdibility} from '../../util/util.ts';
 
 const resolveCurrentLanguage = (lang: string): SupportedLanguage => {
   switch (lang) {
@@ -55,7 +55,6 @@ const AttributeTable = ({edibility, attributes}: { edibility: string, attributes
 
 export const MushroomPage = () => {
   const {t, i18n} = useTranslation();
-  const navigate = useNavigate();
   const species = useLoaderData<Species>();
   const currentLang = resolveCurrentLanguage(i18n.language);
   const attributes = species.attributes[currentLang] ?? [];
@@ -74,7 +73,7 @@ export const MushroomPage = () => {
       <Grid size={{xs: 12}}>
         <NavSeparator>
           <Box display="flex" justifyContent="flex-start" width="100%">
-            <NavButton onClick={() => navigate('/catalog')}>{t('Hakemisto')}</NavButton>
+            <NavButton to="/catalog">{t('Sienihakemisto')}</NavButton>
           </Box>
           <Box display="flex" justifyContent="flex-end" width="100%">
             <LangSelector/>

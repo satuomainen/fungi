@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule . index.php
+Header set Access-Control-Allow-Origin "*"
+Options -Indexes
